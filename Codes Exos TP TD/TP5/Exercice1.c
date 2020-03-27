@@ -160,7 +160,7 @@ void InitUart_SansInterruption(void)
 			"10" SMCLK
 			"11" SMCLK
 
-	3. Faire un reset (Activer) de la state machine du USCI_A0
+	3. Faire un reset (Activer) de la state machine du USCI_A1
 		registre : UCAxCTL1, USCI_Ax Control Register 1
 		bit b0 (UCSWRST)  Software reset enable
 			'0' Disabled. USCI reset released for operation.
@@ -209,7 +209,7 @@ void InitUart_SansInterruption(void)
 		UCA1BR0=0x6D et UCA1BR1=0x00
 		Car 16 bits pour coder 0x682 et que les registres UCA0BR0 et UCA0BR1 sont des registres de 8bits
 
-	7. Relacher le Reset (Deactiver) de la machine a etat du USCI_A0
+	7. Relacher le Reset (Deactiver) de la machine a etat du USCI_A1
 		registre : UCAxCTL1, USCI_Ax Control Register 1
 		bit b0 (UCSWRST)  Software reset enable
 			'0' Disabled. USCI reset released for operation.
@@ -302,7 +302,7 @@ void InitUart_SansInterruption(void)
 
 		// ecrire le code a la ligne ci-dessous
 
-	// 7. Relacher le Reset (Deactiver) de la machine a etat du USCI_A0
+	// 7. Relacher le Reset (Deactiver) de la machine a etat du USCI_A1
 		// bit b0 (UCSWRST) de UCA1CTL1 -> '0'
 		// mettre a '0' le bits b0 du registre UCA1CTL1
 		// ecrire le code a la ligne ci-dessous
